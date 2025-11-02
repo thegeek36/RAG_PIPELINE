@@ -1,0 +1,12 @@
+:
+            os.makedirs(os.path.join(save_directory, speaker_embeddings_directory, "v2"), exist_ok=True)
+
+            embeddings_dict = {}
+
+            embeddings_dict["repo_or_path"] = save_directory
+
+            for prompt_key in self.available_voice_presets:
+                voice_preset = self._load_voice_preset(prompt_key)
+
+                tmp_dict = {}
+                for key in self.speake
